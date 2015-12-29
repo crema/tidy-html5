@@ -15,6 +15,7 @@ module TidyHtml5
     command = "#{bin} #{configs}"
 
     tidied_html = ''
+    errors = ''
     Open3.popen3(command) {|stdin, stdout, stderr,  _|
       stdin.puts html
       stdin.close
